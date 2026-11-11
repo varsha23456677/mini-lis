@@ -206,6 +206,104 @@ namespace Lis.Infrastructure.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("TestDefinitions", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "HGB",
+                            CreatedAtUtc = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Hemoglobin",
+                            ReferenceHigh = 17.5m,
+                            ReferenceLow = 12.0m,
+                            SampleType = "Blood",
+                            Unit = "g/dL"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "WBC",
+                            CreatedAtUtc = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "White Blood Cell Count",
+                            ReferenceHigh = 11.0m,
+                            ReferenceLow = 4.0m,
+                            SampleType = "Blood",
+                            Unit = "10^3/uL"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "PLT",
+                            CreatedAtUtc = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Platelet Count",
+                            ReferenceHigh = 450.0m,
+                            ReferenceLow = 150.0m,
+                            SampleType = "Blood",
+                            Unit = "10^3/uL"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "RBC",
+                            CreatedAtUtc = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Red Blood Cell Count",
+                            ReferenceHigh = 5.9m,
+                            ReferenceLow = 4.2m,
+                            SampleType = "Blood",
+                            Unit = "10^6/uL"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "FBS",
+                            CreatedAtUtc = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Fasting Blood Glucose",
+                            ReferenceHigh = 99.0m,
+                            ReferenceLow = 70.0m,
+                            SampleType = "Blood",
+                            Unit = "mg/dL"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Code = "CHOL",
+                            CreatedAtUtc = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Total Cholesterol",
+                            ReferenceHigh = 200.0m,
+                            ReferenceLow = 0.0m,
+                            SampleType = "Blood",
+                            Unit = "mg/dL"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "CREA",
+                            CreatedAtUtc = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Serum Creatinine",
+                            ReferenceHigh = 1.3m,
+                            ReferenceLow = 0.6m,
+                            SampleType = "Blood",
+                            Unit = "mg/dL"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Code = "TSH",
+                            CreatedAtUtc = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Thyroid Stimulating Hormone",
+                            ReferenceHigh = 4.0m,
+                            ReferenceLow = 0.4m,
+                            SampleType = "Blood",
+                            Unit = "uIU/mL"
+                        });
                 });
 
             modelBuilder.Entity("Lis.Domain.Entities.Order", b =>
